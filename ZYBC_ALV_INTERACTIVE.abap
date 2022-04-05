@@ -22,6 +22,7 @@ SELECT carrid connid price from SFLIGHT into table it_SFLIGHT up to 100 rows.
 wa_fcat-fieldname = 'CARRID'."campo
 wa_fcat-seltext_m = 'Airline Code'."Titulo columna
 wa_fcat-key       = 'X'."pinta columna de color azul
+wa_fcat-hotspot   = 'X'. "sibralla contenido del campo
 append wa_fcat to it_fcat.
 clear wa_fcat.
 
