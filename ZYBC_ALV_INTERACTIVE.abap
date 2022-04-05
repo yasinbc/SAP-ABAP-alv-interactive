@@ -53,3 +53,9 @@ IF sy-subrc <> 0.
 * Implement suitable error handling here
 ENDIF.
 
+form UCOMMAND using R_UCOMM TYPE SY-ucomm R_SELFIELD TYPE SLIS_SELFIELD.
+  IF r_selfield-fieldname = 'CARRID'.
+    MESSAGE r_selfield-VALUE TYPE 'I'. "POP-UP info user making hover over the character 
+  ENDIF.
+
+ENDFORM.
