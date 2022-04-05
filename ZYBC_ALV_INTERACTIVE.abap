@@ -36,8 +36,12 @@ wa_fcat-seltext_m = 'Airfare'.
 append wa_fcat to it_fcat.
 clear wa_fcat.
 
+data: s_repid like sy-repid.
+
 CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
  EXPORTING
+   I_CALLBACK_PROGRAM                = s_repid"    selecciona una fila completa
+   I_CALLBACK_USER_COMMAND           = 'UCOMMAND'" selecciona una fila completa
    IT_FIELDCAT                       = it_fcat
   TABLES
     t_outtab                          = it_SFLIGHT
@@ -48,3 +52,4 @@ CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
 IF sy-subrc <> 0.
 * Implement suitable error handling here
 ENDIF.
+
