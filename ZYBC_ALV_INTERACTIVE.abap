@@ -18,8 +18,10 @@ data: it_fcat type slis_t_fieldcat_Alv,
 START-OF-SELECTION.
 SELECT carrid connid price from SFLIGHT into table it_SFLIGHT up to 100 rows.
 
-wa_fcat-fieldname = 'CARRID'.
-wa_fcat-seltext_m = 'Airline Code'.
+"añade columna CARRID
+wa_fcat-fieldname = 'CARRID'."campo
+wa_fcat-seltext_m = 'Airline Code'."Titulo columna
+wa_fcat-key       = 'X'."pinta columna de color azul
 append wa_fcat to it_fcat.
 clear wa_fcat.
 
